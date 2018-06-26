@@ -1,0 +1,35 @@
+{
+    "extends": [
+        "google",
+        "eslint:recommended",
+        "plugin:node/recommended",
+        "plugin:security/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "env": {
+        "es6": true
+    },
+    "plugins": [
+        "node",
+        "security"
+    ],
+    "rules": {
+        "node/exports-style": [
+            "error",
+            "module.exports"
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "array-bracket-spacing": [
+            "error",
+            "always"
+        ]
+    }
+}

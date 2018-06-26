@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Guillermo Recalde",
+      "authorEmail": "guille@easytech.com.ar",
+      "authorUrl": ""
+    }
+  }
+}
