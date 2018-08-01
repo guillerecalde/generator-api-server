@@ -140,9 +140,16 @@ module.exports = class extends Generator {
     };
     const originalPackage = this.fs.readJSON(this.templatePath('package.json'), {});
     const userPackage = this.fs.readJSON(this.destinationPath('package.json'), {});
+    console.log(Object.keys(userPackage));
+    packageInfo.dependencies = Object.assign(
+      {},
+      originalPackage.dependencies,
+      userPackage.dependencies
+    );
+
     this.fs.writeJSON(
       this.destinationPath('package.json'),
-      Object.assign({}, originalPackage, packageInfo, userPackage)
+      Object.assign({}, originalPackage, packageInfo)
     );
   }
 
